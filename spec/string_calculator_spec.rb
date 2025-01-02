@@ -29,7 +29,7 @@ RSpec.describe StringCalculator do
 
     context '3. when we allow new lines as well' do
       it 'should return 6, the sum of 1\n2,3' do
-        expect(object.add('1\n2,3')).to eq(6)
+        expect(object.add("1\n2,3")).to eq(6)
       end
     end
   end
