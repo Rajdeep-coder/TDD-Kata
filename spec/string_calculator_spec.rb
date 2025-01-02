@@ -60,7 +60,7 @@ RSpec.describe StringCalculator do
     end
 
     context '10, 11, and 12 when we pass any lenth of delimiters' do
-      it 'should return 6, the sum of 1\n2,3' do
+      it 'should return the sum of numbers' do
         expect(object.add("//[***]\n1***2***3")).to eq(6)
         expect(object.add("//[*][%]\n1*2%3")).to eq(6)
         expect(object.add("//[**][%%]\n1**2%%3")).to eq(6)
