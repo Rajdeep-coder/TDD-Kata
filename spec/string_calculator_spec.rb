@@ -50,5 +50,13 @@ RSpec.describe StringCalculator do
         expect { object.add('-1,-2,3') }.to raise_error(RuntimeError, 'negatives not allowed: -1, -2')
       end
     end
+
+    # 7th and 8th are not compitable with rails so moving on 9th
+
+    context '9. when values more than 1000' do
+      it 'should ignore the number over 1000' do
+        expect(object.add('2, 1001')).to eq(2)
+      end
+    end
   end
 end
