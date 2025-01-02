@@ -41,7 +41,13 @@ RSpec.describe StringCalculator do
 
     context '5. when negative numbers are passed' do
       it 'should raise an exception with message "negatives not allowed"' do
-        expect { object.add("-1,2,3") }.to raise_error(RuntimeError, "negatives not allowed: -1")
+        expect { object.add('-1,2,3') }.to raise_error(RuntimeError, 'negatives not allowed: -1')
+      end
+    end
+
+    context '6. when more then one negative numbers are passed' do
+      it 'should raise an exception with message "negatives not allowed - numbers"' do
+        expect { object.add('-1,-2,3') }.to raise_error(RuntimeError, 'negatives not allowed: -1, -2')
       end
     end
   end
