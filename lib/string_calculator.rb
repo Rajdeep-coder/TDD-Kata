@@ -1,9 +1,10 @@
 class StringCalculator
   def add(str)
     str = str.scan(/-?\d+/) # let's use scan for fetching numbers from string
-    str.map do |num|
-      raise "negatives not allowed: #{num}" if num.to_i < 0
-    end
+    negatives = str.select { |num| num.to_i < 0 }
+
+    raise "negatives not allowed: #{negatives.join(', ')}" unless negatives.empty?
+
     str.map(&:to_i).sum # no need split scan default retun array
   end
 end
