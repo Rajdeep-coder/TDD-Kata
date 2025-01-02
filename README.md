@@ -4,7 +4,8 @@ Follow these steps to set up and run the project:
 
 1. **Clone the Repository**:
    ```bash
-   will add here
+   git clone https://github.com/Rajdeep-coder/TDD-Kata.git
+   cd TDD-Kata
    ```
 
 2. **Install Dependencies**:
