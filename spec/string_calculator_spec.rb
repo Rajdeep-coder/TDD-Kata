@@ -32,5 +32,11 @@ RSpec.describe StringCalculator do
         expect(object.add("1\n2,3")).to eq(6)
       end
     end
+
+    context '4. when we allow different delimiters' do
+      it 'should return 6, the sum of 1\n2,3' do
+        expect(object.add("//;\n1;2")).to eq(3)
+      end
+    end
   end
 end
