@@ -5,6 +5,8 @@ class StringCalculator
 
     raise "negatives not allowed: #{negatives.join(', ')}" unless negatives.empty?
 
+    str = str.reject { |num| num.to_i > 1000 }
+
     str.map(&:to_i).sum # no need split scan default retun array
   end
 end
